@@ -11,8 +11,8 @@ Immutable Passport simplifies onboarding for games, ensuring a secure, passwordl
 
 1.Install/use latest version of node:
 
- 1. If you don't have node installed, install here [node](https://nodejs.org/en/download)
- 2. To make sure you're using the latest version, we install the @imtbl/sdk that enables all the passport functions:
+i. If you don't have node installed, install here [node](https://nodejs.org/en/download)     
+ii. To make sure you're using the latest version, we install the @imtbl/sdk that enables all the passport functions:
 
  ```
 npm install @imtbl/sdk@0.28.0
@@ -23,6 +23,12 @@ npm install @imtbl/sdk@0.28.0
     2. Click 'Add Project' and name it 'Passport Integration (your username)' choosing Immutable zkEVM as the rollup.
     3. Create a testnet environment named 'Default Environment' to test your app.
     4. Navigate to Passport in the sidebar and create default Passport clients.
-    5. Edit the Application type to 'Website' and set Logout URLs to http://localhost:5003/ and Redirect URLs to http://localhost:5003/callback. Save and copy the Client ID for   
-       later use.
+    5. Edit the Application type to 'Website' and set
+       
+       Logout URLs to http://localhost:5003/
+       
+       Redirect URLs to http://localhost:5003/callback.
+       
+       Save and copy the Client ID for later use.
+       
     6. Learn: Logout URLs direct users after logout, while Redirect URLs handle authentication completion. For local testing, use localhost; update for live deployment. 
