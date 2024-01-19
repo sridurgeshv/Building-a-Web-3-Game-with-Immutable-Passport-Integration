@@ -58,14 +58,33 @@ npm install @imtbl/sdk@0.28.0
     The final step guides users through testing the gameplay. It instructs them to run a local server, create a secure tunnel with ngrok, and access the game through a browser. Players can log in with Immutable Passport, play the game using arrow keys and spacebar, and have the opportunity to mint NFTs based on their in-game achievements.
 
     Now that we have finished building our game, it is time to test it out. In your terminal, ensure that you are in the immutable-stackupinvaders directory. Then, run the following command to run the server on the port 3000.
+
 ```
 http-server -p 3000
 ```
-    Next, open a new terminal or open the ngrok application and run the following command, which will invoke the ngrok tool to create a secure tunnel to our local development environment running on HTTP over port 3000. Replace <YOUR DOMAIN> with the domain you obtained in Step 2.
-``` ngrok http 3000 --domain <YOUR DOMAIN> ```
+
+Next, open a new terminal or open the ngrok application and run the following command, which will invoke the ngrok tool to create a secure tunnel to our local development environment running on HTTP over port 3000. Replace <YOUR DOMAIN> with the domain you obtained in Step 2.
+    
+```
+ngrok http 3000 --domain <YOUR DOMAIN>
+```
+
 
 In your browser, go to your domain. ⚠️ Ensure that your browser's pop up blocker is turned off, as it will interfere with the login and minting process. Proceed to click on the 'Connect passport' button, which will trigger a pop-up to log in with Immutable Passport. Once the login has been authenticated, the game will start. You can use arrow keys to move your spaceship around and spacebar to shoot. When you hit a score of 250, you have the chance to mint your first NFT. Then, resume the game.
 
 When you hit a score of 500, your nft div will show a second NFT to be minted. 
 
 Next, when you click on the resume button for the second time in the game session, you should see your upgraded spaceship which is able to shoot two bullets. 
+
+## Conclusion 
+
+##Final Thoughts and Tips:
+Local Testing Best Practice: It is advisable to conduct thorough testing on localhost before deploying your application. This ensures a meticulous examination of your integration with Immutable Passport in a controlled environment, reducing the risk of unforeseen issues in the live deployment.
+
+##Credential Security: Prioritize the security of your Immutable Passport credentials, particularly the Client ID. Avoid exposing such sensitive information in your source code or public repositories. Implement secure practices to safeguard your credentials from unauthorized access.
+
+##Exploration of Features: Delve deeper into the functionalities and capabilities offered by Immutable Passport. Refer to the official documentation to discover additional ways to augment and optimize your application. Explore opportunities for further integration and feature enhancement.
+
+##Community Support: In case of challenges or inquiries, leverage the supportive Immutable community. Engage with forums, chat channels, and online communities to tap into valuable resources and insights. The Immutable Discord platform is particularly conducive for seeking assistance and participating in discussions.
+
+Access my live application : [Application]()
