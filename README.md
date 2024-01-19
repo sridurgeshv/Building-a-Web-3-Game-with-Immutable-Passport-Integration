@@ -77,14 +77,16 @@ When you hit a score of 500, your nft div will show a second NFT to be minted.
 Next, when you click on the resume button for the second time in the game session, you should see your upgraded spaceship which is able to shoot two bullets. 
 
 ## Conclusion 
+- [Local Testing Best Practice](#Local-Testing-Best-Practice) :
+   It is advisable to conduct thorough testing on localhost before deploying your application. This ensures a meticulous examination of your integration with Immutable Passport in a controlled environment, reducing the risk of unforeseen issues in the live deployment.
 
-##Final Thoughts and Tips:
-Local Testing Best Practice: It is advisable to conduct thorough testing on localhost before deploying your application. This ensures a meticulous examination of your integration with Immutable Passport in a controlled environment, reducing the risk of unforeseen issues in the live deployment.
+- [Credential Security](#Credential-Security) :
+Prioritize the security of your Immutable Passport credentials, particularly the Client ID. Avoid exposing such sensitive information in your source code or public repositories. Implement secure practices to safeguard your credentials from unauthorized access.
 
-##Credential Security: Prioritize the security of your Immutable Passport credentials, particularly the Client ID. Avoid exposing such sensitive information in your source code or public repositories. Implement secure practices to safeguard your credentials from unauthorized access.
+- [Exploration of Features](#Exploration-of-Features) : 
+Delve deeper into the functionalities and capabilities offered by [Immutable Passport](https://docs.immutable.com/docs/zkevm/overview/). Refer to the official documentation to discover additional ways to augment and optimize your application. Explore opportunities for further integration and feature enhancement.
 
-##Exploration of Features: Delve deeper into the functionalities and capabilities offered by Immutable Passport. Refer to the official documentation to discover additional ways to augment and optimize your application. Explore opportunities for further integration and feature enhancement.
+- [Community Support](#Community-Support) :
+In case of challenges or inquiries, leverage the supportive [Immutable community](). Engage with forums, chat channels, and online communities to tap into valuable resources and insights. The Immutable Discord platform is particularly conducive for seeking assistance and participating in discussions.
 
-##Community Support: In case of challenges or inquiries, leverage the supportive Immutable community. Engage with forums, chat channels, and online communities to tap into valuable resources and insights. The Immutable Discord platform is particularly conducive for seeking assistance and participating in discussions.
-
-Access my live application : [Application]()
+### Access my live application : [Application]()
