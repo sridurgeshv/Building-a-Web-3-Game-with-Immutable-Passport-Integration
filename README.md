@@ -36,28 +36,25 @@ npm install @imtbl/sdk@0.28.0
 3. Configure Game Elements
    In this step, you configure the necessary elements for your game. This includes setting up the canvas size, initializing player and invader objects, and handling keyboard input for player movement and shooting.
 
-4. Manage Login Process (Part 1)
-   In this step, the login.js file is introduced, which handles Ethereum connection, user authentication, and NFT interactions in the game. The code includes functions for connecting to the Ethereum Virtual Machine (EVM), requesting user accounts, fetching user information, and logging out. Additionally, the contract address and private key are inserted, and functions for retrieving NFT details and handling the claiming process are defined.
+4. Manage Login Process (Part 1 & 2)
+   In this step, the login.js file is introduced, which handles Ethereum connection, user authentication, and NFT interactions in the game. The code includes functions for connecting to the Ethereum Virtual Machine (EVM), requesting user accounts, fetching user information, and logging out. Additionally, the contract address and private key are inserted, and functions for retrieving NFT details and handling the claiming process are defined. Continuing from Step 4, this step covers the minting process for NFTs. The grantMinterRole function is introduced to grant the minter role to a specified address. The mintNft function is provided for minting NFTs, and the upgradeNft function is defined for triggering an upgrade event when the second milestone is reached.
 
-5. Manage Login Process (Part 2 - Minting)
-   Continuing from Step 4, this step covers the minting process for NFTs. The grantMinterRole function is introduced to grant the minter role to a specified address. The mintNft function is provided for minting NFTs, and the upgradeNft function is defined for triggering an upgrade event when the second milestone is reached.
-
-6. Player Class
+5. Player Class
    This step introduces the Player class in the Player.js file. The class manages the player's state, including position, movement, bullets, lives, score, and NFT-related information. Methods for displaying NFTs, respawning the player, and upgrading the spaceship are defined. The class also includes game state updates, movement and action handlers, drawing methods, and utility methods.
 
-7. Bullets for Player and Invaders
+6. Bullets for Player and Invaders
    This step involves creating bullet classes. The Bullet class is a general class for bullets, while the PlayerBullet and AlienBullet classes extend the Bullet class. These classes define bullet behavior, including movement direction, updates, and collision detection.
 
-8. Understanding Alien.js and Invaders.js
+7. Understanding Alien.js and Invaders.js
    In this step, we explore the Alien.js and Invaders.js files. Alien.js defines the Alien class, which represents individual alien objects in the game. It includes methods for drawing the alien and checking for collisions with the player. Invaders.js, on the other hand, defines the Invaders class, responsible for managing the logic of the enemy alien formation. It handles movement, shooting, and collision detection with the player.
 
-9. Understanding Debris.js
+8. Understanding Debris.js
     In this step, we examine the Debris.js file, which defines the behavior and appearance of space debris objects in the game. The Debris class has methods for updating the position, checking if it's off-screen, displaying the debris, and detecting collisions with the player.
 
-10. Understanding Sketch.js
+9. Understanding Sketch.js
     This step focuses on the Sketch.js file, the main script that orchestrates the game. It initializes game entities, handles game states, and manages user interactions. The script includes functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
 
-11. Testing Gameplay
+10. Testing Gameplay
     The final step guides users through testing the gameplay. It instructs them to run a local server, create a secure tunnel with ngrok, and access the game through a browser. Players can log in with Immutable Passport, play the game using arrow keys and spacebar, and have the opportunity to mint NFTs based on their in-game achievements.
 
     Now that we have finished building our game, it is time to test it out. In your terminal, ensure that you are in the immutable-stackupinvaders directory. Then, run the following command to run the server on the port 3000.
