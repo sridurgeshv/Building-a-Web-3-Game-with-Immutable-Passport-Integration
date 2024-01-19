@@ -32,3 +32,43 @@ npm install @imtbl/sdk@0.28.0
        Save and copy the Client ID for later use.
        
     6. Learn: Logout URLs direct users after logout, while Redirect URLs handle authentication completion. For local testing, use localhost; update for live deployment. 
+
+3. Configure Game Elements
+   In this step, you configure the necessary elements for your game. This includes setting up the canvas size, initializing player and invader objects, and handling keyboard input for player movement and shooting.
+
+4. Manage Login Process (Part 1)
+   In this step, the login.js file is introduced, which handles Ethereum connection, user authentication, and NFT interactions in the game. The code includes functions for connecting to the Ethereum Virtual Machine (EVM), requesting user accounts, fetching user information, and logging out. Additionally, the contract address and private key are inserted, and functions for retrieving NFT details and handling the claiming process are defined.
+
+5. Manage Login Process (Part 2 - Minting)
+   Continuing from Step 4, this step covers the minting process for NFTs. The grantMinterRole function is introduced to grant the minter role to a specified address. The mintNft function is provided for minting NFTs, and the upgradeNft function is defined for triggering an upgrade event when the second milestone is reached.
+
+6. Player Class
+   This step introduces the Player class in the Player.js file. The class manages the player's state, including position, movement, bullets, lives, score, and NFT-related information. Methods for displaying NFTs, respawning the player, and upgrading the spaceship are defined. The class also includes game state updates, movement and action handlers, drawing methods, and utility methods.
+
+7. Bullets for Player and Invaders
+   This step involves creating bullet classes. The Bullet class is a general class for bullets, while the PlayerBullet and AlienBullet classes extend the Bullet class. These classes define bullet behavior, including movement direction, updates, and collision detection.
+
+8. Understanding Alien.js and Invaders.js
+   In this step, we explore the Alien.js and Invaders.js files. Alien.js defines the Alien class, which represents individual alien objects in the game. It includes methods for drawing the alien and checking for collisions with the player. Invaders.js, on the other hand, defines the Invaders class, responsible for managing the logic of the enemy alien formation. It handles movement, shooting, and collision detection with the player.
+
+9. Understanding Debris.js
+    In this step, we examine the Debris.js file, which defines the behavior and appearance of space debris objects in the game. The Debris class has methods for updating the position, checking if it's off-screen, displaying the debris, and detecting collisions with the player.
+
+10. Understanding Sketch.js
+    This step focuses on the Sketch.js file, the main script that orchestrates the game. It initializes game entities, handles game states, and manages user interactions. The script includes functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
+
+11. Testing Gameplay
+    The final step guides users through testing the gameplay. It instructs them to run a local server, create a secure tunnel with ngrok, and access the game through a browser. Players can log in with Immutable Passport, play the game using arrow keys and spacebar, and have the opportunity to mint NFTs based on their in-game achievements.
+
+    Now that we have finished building our game, it is time to test it out. In your terminal, ensure that you are in the immutable-stackupinvaders directory. Then, run the following command to run the server on the port 3000.
+```
+http-server -p 3000
+```
+    Next, open a new terminal or open the ngrok application and run the following command, which will invoke the ngrok tool to create a secure tunnel to our local development environment running on HTTP over port 3000. Replace <YOUR DOMAIN> with the domain you obtained in Step 2.
+``` ngrok http 3000 --domain <YOUR DOMAIN> ```
+
+In your browser, go to your domain. ⚠️ Ensure that your browser's pop up blocker is turned off, as it will interfere with the login and minting process. Proceed to click on the 'Connect passport' button, which will trigger a pop-up to log in with Immutable Passport. Once the login has been authenticated, the game will start. You can use arrow keys to move your spaceship around and spacebar to shoot. When you hit a score of 250, you have the chance to mint your first NFT. Then, resume the game.
+
+When you hit a score of 500, your nft div will show a second NFT to be minted. 
+
+Next, when you click on the resume button for the second time in the game session, you should see your upgraded spaceship which is able to shoot two bullets. 
