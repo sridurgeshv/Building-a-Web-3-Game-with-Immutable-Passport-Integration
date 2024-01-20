@@ -58,7 +58,9 @@ Replace <YOUR_DOMAIN> with the copied domain.
 ### vi. Access the Forwarded URL:
 The HTTPS URL shown in the forwarding field now forwards to your local server.
 
-## Explanation : 
+# Configure Game Elements
+Configure essential game elements such as canvas size, player and invader objects, and keyboard input for player movement and shooting.
+
 ### i. Manage Login Process (Part 1 & 2)
 Introduce the login.js file, handling Ethereum connection, user authentication, and NFT interactions. The code includes functions for EVM connection, user accounts, information fetching, and logging out. Additionally, contract address and private key insertion, NFT details retrieval, and claiming process handling are covered.
 ### ii. Player Class
