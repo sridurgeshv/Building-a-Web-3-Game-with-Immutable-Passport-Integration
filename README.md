@@ -7,124 +7,76 @@ Embarking on the journey of "Building a Game with the Immutable zkEVM" opens a g
 
 Immutable Passport simplifies onboarding for games, ensuring a secure, passwordless experience. It facilitates wallet creation without holding private keys, ensuring user control and ownership. Integrated within the Immutable platform, it grants developers access to gamers and scalable infrastructure. Gamers create their Passport once, gaining access to all Immutable-built games and marketplaces, eliminating the hassle of multiple accounts.
 
-## Setting Up Project on Immutable Developer Hub
+Now I want the below information in a professional documentation format  :
 
-1.Install/use latest version of node:
+# Setting Up Project on Immutable Developer Hub
 
-i. If you don't have node installed, install here [node](https://nodejs.org/en/download)     
-ii. To make sure you're using the latest version, we install the @imtbl/sdk that enables all the passport functions:
+Follow these steps to set up your project on the Immutable Developer Hub for seamless integration with Immutable Passport.
 
- ```
+### 1. Install/Use the Latest Version of Node.js
+
+Ensure you have Node.js installed on your machine. If not,download [Node.js](https://nodejs.org/en/download).
+
+To use the latest version of immutable, install the @imtbl/sdk, enabling all the passport functions:
+
+```bash
 npm install @imtbl/sdk@0.28.0
 ```
-iii. Exposing Local Server with ngrok
 
-To expose your local server to the internet with ngrok for testing purposes, follow these steps:
+### Expose Local Server with ngrok
 
-1. **Install ngrok:**
-   - For MacOS (using Homebrew):
-     ```bash
-     brew install ngrok
-     ```
-   - For Windows:
-     Download and unzip [ngrok](https://ngrok.com/), then open the application via the terminal.
-
-2. **Create an ngrok Account:**
-   - Visit [ngrok](https://ngrok.com/) and sign up for a free account.
-
-3. **Configure Authentication:**
-   - After creating an account, run the following command in your terminal to configure ngrok:
-     ```bash
-     ngrok config add-authtoken <YOUR_AUTHTOKEN>
-     ```
-     Replace `<YOUR_AUTHTOKEN>` with your actual ngrok authentication token.
-
-4. **Claim a Domain:**
-   - On the ngrok website or in the Cloud Edge section, claim a free domain. Copy the obtained domain.
-
-5. **Expose Local Server:**
-   - In your terminal, run the following command to expose your local server:
-     ```bash
-     ngrok http 3000 --domain <YOUR_DOMAIN>
-     ```
-     Replace `<YOUR_DOMAIN>` with the copied domain.
-
-6. **Access the Forwarded URL:**
-   - The HTTPS URL shown in the forwarding field now forwards to your local server.
-
-7. **Testing:**
-   - Keep both the HTTP server and ngrok running.
-   - Visit your ngrok domain in a browser to test your application.
-   - Remember to stop the HTTP server using Ctrl+C when testing is complete.
- 
-
-
-2. Application view :
-    1. Go to Immutable Developer Hub and log in or create an account.
-    2. Click 'Add Project' and name it 'Passport Integration (your username)' choosing Immutable zkEVM as the rollup.
-    3. Create a testnet environment named 'Default Environment' to test your app.
-    4. Navigate to Passport in the sidebar and create default Passport clients.
-    5. Edit the Application type to 'Website' and set
-       
-       Logout URLs to http://localhost:5003/logout
-       
-       Redirect URLs to http://localhost:5003/
-  
-       Client ID : DTvxesQaU************
-       
-       Save and copy the Client ID for later use.
-
-       Modify Application Type for Website:
-       - Click on the edit icon for the Website application type.
-       - Change Redirect URLs to `<NGROK_URL>` and Logout URLs to `<NGROK_URL>/logout.html`.
-         Replace `<NGROK_URL>` with the URL provided in Step 2, ensuring it starts with 'https://'.
-       - Copy the updated Client ID for later use.
-       - Click 'Save' to apply the changes.
-       
-    6. Learn: Logout URLs direct users after logout, while Redirect URLs handle authentication completion. For local testing, use localhost; update for live deployment. 
-
-
-
-
-
-
-
-3. Configure Game Elements
-   In this step, you configure the necessary elements for your game. This includes setting up the canvas size, initializing player and invader objects, and handling keyboard input for player movement and shooting.
-
-4. Manage Login Process (Part 1 & 2)
-   In this step, the login.js file is introduced, which handles Ethereum connection, user authentication, and NFT interactions in the game. The code includes functions for connecting to the Ethereum Virtual Machine (EVM), requesting user accounts, fetching user information, and logging out. Additionally, the contract address and private key are inserted, and functions for retrieving NFT details and handling the claiming process are defined. Continuing from Step 4, this step covers the minting process for NFTs. The grantMinterRole function is introduced to grant the minter role to a specified address. The mintNft function is provided for minting NFTs, and the upgradeNft function is defined for triggering an upgrade event when the second milestone is reached.
-
-5. Player Class
-   This step introduces the Player class in the Player.js file. The class manages the player's state, including position, movement, bullets, lives, score, and NFT-related information. Methods for displaying NFTs, respawning the player, and upgrading the spaceship are defined. The class also includes game state updates, movement and action handlers, drawing methods, and utility methods.
-
-6. Bullets for Player and Invaders
-   This step involves creating bullet classes. The Bullet class is a general class for bullets, while the PlayerBullet and AlienBullet classes extend the Bullet class. These classes define bullet behavior, including movement direction, updates, and collision detection.
-
-7. Understanding Alien.js and Invaders.js
-   In this step, we explore the Alien.js and Invaders.js files. Alien.js defines the Alien class, which represents individual alien objects in the game. It includes methods for drawing the alien and checking for collisions with the player. Invaders.js, on the other hand, defines the Invaders class, responsible for managing the logic of the enemy alien formation. It handles movement, shooting, and collision detection with the player.
-
-8. Understanding Debris.js
-    In this step, we examine the Debris.js file, which defines the behavior and appearance of space debris objects in the game. The Debris class has methods for updating the position, checking if it's off-screen, displaying the debris, and detecting collisions with the player.
-
-9. Understanding Sketch.js
-    This step focuses on the Sketch.js file, the main script that orchestrates the game. It initializes game entities, handles game states, and manages user interactions. The script includes functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
-
-10. Testing Gameplay
-    The final step guides users through testing the gameplay. It instructs them to run a local server, create a secure tunnel with ngrok, and access the game through a browser. Players can log in with Immutable Passport, play the game using arrow keys and spacebar, and have the opportunity to mint NFTs based on their in-game achievements.
-
-    Now that we have finished building our game, it is time to test it out. In your terminal, ensure that you are in the immutable-stackupinvaders directory. Then, run the following command to run the server on the port 3000.
-
+### i. Install ngrok:
+ For MacOS (using Homebrew):
+``` bash
+brew install ngrok
 ```
-http-server -p 3000
-```
+ For Windows:
+Download [ngrok](https://dashboard.ngrok.com/get-started/setup/windows) and unzip, then open the application via the terminal.
 
-Next, open a new terminal or open the ngrok application and run the following command, which will invoke the ngrok tool to create a secure tunnel to our local development environment running on HTTP over port 3000. Replace <YOUR DOMAIN> with the domain you obtained in Step 2.
-    
-```
-ngrok http 3000 --domain <YOUR DOMAIN>
-```
+### ii. Create an ngrok Account:
+Visit [ngrok](https://dashboard.ngrok.com/login?state=JmUkV6gkSjCOEUITOlSyiz77u5IPWoRj1gC9yoOFFrLa7EsDyFUO2p7YpKZPmqCqj-qpy3Q04E8lbnAQQg4qPVXM7lR5_iu8iq0s9H4eSNn8QhCEho02NiEl1UKw2x1JBIWIZHh71P25SJALLdY80D-vltCJ_35KdAlerlpS0TR2gg%3D%3D) and sign up for a free account.
 
+### iii. Configure Authentication:
+After creating an account, run the following command in your terminal to configure ngrok:
+``` bash
+ngrok config add-authtoken <YOUR_AUTHTOKEN>
+```
+After creating the account, you will be able to see the Auth Token on your left and replace it here.
+
+### iv. Claim a Domain:
+On the ngrok website or in the Cloud Edge section, claim a free [domain](https://dashboard.ngrok.com/cloud-edge/domains). Copy the obtained domain.
+
+### v. Expose Local Server:
+In your terminal, run the following command to expose your local server:
+    ``` bash
+       ngrok http 3000 --domain <YOUR_DOMAIN>
+    ```
+    Replace <YOUR_DOMAIN> with the copied domain.
+### vi. Access the Forwarded URL:
+The HTTPS URL shown in the forwarding field now forwards to your local server.
+
+### Explanation : 
+   ## Manage Login Process (Part 1 & 2)
+       Introduce the login.js file, handling Ethereum connection, user authentication, and NFT interactions. The code includes functions for EVM connection, user accounts, information fetching, and logging out. Additionally, contract address and private key insertion, NFT details retrieval, and claiming process handling are covered.
+   ## Player Class
+       Introduce the Player class in Player.js, managing player state, including position, movement, bullets, lives, score, and NFT-related information. Define methods for NFT display, player respawn, spaceship upgrade, game state updates, movement/action handling, drawing, and utility.
+   ## Bullets for Player and Invaders
+       Create bullet classes: Bullet (general), PlayerBullet, and AlienBullet. Define bullet behavior, including movement direction, updates, and collision detection.
+   ## Understanding Alien.js and Invaders.js
+       Explore Alien.js (Alien class) and Invaders.js (Invaders class). Alien.js represents individual aliens, with methods for drawing and player collisions. Invaders.js manages enemy logic, handling movement, shooting, and player collisions.
+   ## Understanding Debris.js & Sketch.js 
+       Examine Debris.js, defining behavior and appearance of space debris. The Debris class has methods for updating position, off-screen checking, displaying debris, and detecting collisions with the player. Focus on Sketch.js, the main script orchestrating the game. Initialize game entities, manage game states, and handle user interactions. Include functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
+      
+### Testing Gameplay
+   Guide users through testing gameplay—run a local server, create a secure tunnel with ngrok, and access the game through a browser. Log in with Immutable Passport, play using arrow keys and spacebar, and mint NFTs based on in-game achievements.
+
+   ``` bash
+       http-server -p 3000
+    ```
+
+   ``` bash
+       ngrok http 3000 --domain <YOUR DOMAIN>
+    ```
 
 In your browser, go to your domain. ⚠️ Ensure that your browser's pop up blocker is turned off, as it will interfere with the login and minting process. Proceed to click on the 'Connect passport' button, which will trigger a pop-up to log in with Immutable Passport. Once the login has been authenticated, the game will start. You can use arrow keys to move your spaceship around and spacebar to shoot. When you hit a score of 250, you have the chance to mint your first NFT. Then, resume the game.
 
