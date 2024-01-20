@@ -48,23 +48,25 @@ On the ngrok website or in the Cloud Edge section, claim a free [domain](https:/
 
 ### v. Expose Local Server:
 In your terminal, run the following command to expose your local server:
+
     ``` bash
        ngrok http 3000 --domain <YOUR_DOMAIN>
     ```
+    
     Replace <YOUR_DOMAIN> with the copied domain.
 ### vi. Access the Forwarded URL:
 The HTTPS URL shown in the forwarding field now forwards to your local server.
 
 ### Explanation : 
-   ## Manage Login Process (Part 1 & 2)
+   ### i. Manage Login Process (Part 1 & 2)
        Introduce the login.js file, handling Ethereum connection, user authentication, and NFT interactions. The code includes functions for EVM connection, user accounts, information fetching, and logging out. Additionally, contract address and private key insertion, NFT details retrieval, and claiming process handling are covered.
-   ## Player Class
+   ### ii. Player Class
        Introduce the Player class in Player.js, managing player state, including position, movement, bullets, lives, score, and NFT-related information. Define methods for NFT display, player respawn, spaceship upgrade, game state updates, movement/action handling, drawing, and utility.
-   ## Bullets for Player and Invaders
+   ### iii. Bullets for Player and Invaders
        Create bullet classes: Bullet (general), PlayerBullet, and AlienBullet. Define bullet behavior, including movement direction, updates, and collision detection.
-   ## Understanding Alien.js and Invaders.js
+   ### iv. Understanding Alien.js and Invaders.js
        Explore Alien.js (Alien class) and Invaders.js (Invaders class). Alien.js represents individual aliens, with methods for drawing and player collisions. Invaders.js manages enemy logic, handling movement, shooting, and player collisions.
-   ## Understanding Debris.js & Sketch.js 
+   ### v. Understanding Debris.js & Sketch.js 
        Examine Debris.js, defining behavior and appearance of space debris. The Debris class has methods for updating position, off-screen checking, displaying debris, and detecting collisions with the player. Focus on Sketch.js, the main script orchestrating the game. Initialize game entities, manage game states, and handle user interactions. Include functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
       
 ### Testing Gameplay
