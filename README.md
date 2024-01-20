@@ -17,6 +17,47 @@ ii. To make sure you're using the latest version, we install the @imtbl/sdk that
  ```
 npm install @imtbl/sdk@0.28.0
 ```
+iii. Exposing Local Server with ngrok
+
+To expose your local server to the internet with ngrok for testing purposes, follow these steps:
+
+1. **Install ngrok:**
+   - For MacOS (using Homebrew):
+     ```bash
+     brew install ngrok
+     ```
+   - For Windows:
+     Download and unzip [ngrok](https://ngrok.com/), then open the application via the terminal.
+
+2. **Create an ngrok Account:**
+   - Visit [ngrok](https://ngrok.com/) and sign up for a free account.
+
+3. **Configure Authentication:**
+   - After creating an account, run the following command in your terminal to configure ngrok:
+     ```bash
+     ngrok config add-authtoken <YOUR_AUTHTOKEN>
+     ```
+     Replace `<YOUR_AUTHTOKEN>` with your actual ngrok authentication token.
+
+4. **Claim a Domain:**
+   - On the ngrok website or in the Cloud Edge section, claim a free domain. Copy the obtained domain.
+
+5. **Expose Local Server:**
+   - In your terminal, run the following command to expose your local server:
+     ```bash
+     ngrok http 3000 --domain <YOUR_DOMAIN>
+     ```
+     Replace `<YOUR_DOMAIN>` with the copied domain.
+
+6. **Access the Forwarded URL:**
+   - The HTTPS URL shown in the forwarding field now forwards to your local server.
+
+7. **Testing:**
+   - Keep both the HTTP server and ngrok running.
+   - Visit your ngrok domain in a browser to test your application.
+   - Remember to stop the HTTP server using Ctrl+C when testing is complete.
+ 
+
 
 2. Application view :
     1. Go to Immutable Developer Hub and log in or create an account.
@@ -25,13 +66,28 @@ npm install @imtbl/sdk@0.28.0
     4. Navigate to Passport in the sidebar and create default Passport clients.
     5. Edit the Application type to 'Website' and set
        
-       Logout URLs to http://localhost:5003/
+       Logout URLs to http://localhost:5003/logout
        
-       Redirect URLs to http://localhost:5003/callback.
+       Redirect URLs to http://localhost:5003/
+  
+       Client ID : DTvxesQaU************
        
        Save and copy the Client ID for later use.
+
+       Modify Application Type for Website:
+       - Click on the edit icon for the Website application type.
+       - Change Redirect URLs to `<NGROK_URL>` and Logout URLs to `<NGROK_URL>/logout.html`.
+         Replace `<NGROK_URL>` with the URL provided in Step 2, ensuring it starts with 'https://'.
+       - Copy the updated Client ID for later use.
+       - Click 'Save' to apply the changes.
        
     6. Learn: Logout URLs direct users after logout, while Redirect URLs handle authentication completion. For local testing, use localhost; update for live deployment. 
+
+
+
+
+
+
 
 3. Configure Game Elements
    In this step, you configure the necessary elements for your game. This includes setting up the canvas size, initializing player and invader objects, and handling keyboard input for player movement and shooting.
