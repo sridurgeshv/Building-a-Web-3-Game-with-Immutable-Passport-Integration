@@ -52,7 +52,7 @@ On the ngrok website or in the Cloud Edge section, claim a free [domain](https:/
 In your terminal, run the following command to expose your local server:
 
 ``` bash
-    ngrok http 3000 --domain <YOUR_DOMAIN>
+ngrok http 3000 --domain <YOUR_DOMAIN>
 ``` 
 Replace <YOUR_DOMAIN> with the copied domain.
 ### vi. Access the Forwarded URL:
@@ -82,6 +82,15 @@ http-server -p 3000
 ``` bash
 ngrok http 3000 --domain <YOUR DOMAIN>
 ```
+
+- You have to Log in with passport
+
+![Project Logo](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/0.JPG)
+
+- After Logging in with the passport
+
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/1.png)
+
 
 In your browser, go to your domain. ⚠️ Ensure that your browser's pop up blocker is turned off, as it will interfere with the login and minting process. Proceed to click on the 'Connect passport' button, which will trigger a pop-up to log in with Immutable Passport. Once the login has been authenticated, the game will start. You can use arrow keys to move your spaceship around and spacebar to shoot. When you hit a score of 250, you have the chance to mint your first NFT. Then, resume the game.
 
