@@ -9,9 +9,9 @@ Immutable Passport simplifies onboarding for games, ensuring a secure, passwordl
 
 Now I want the below information in a professional documentation format  :
 
-# Setting Up Project on Immutable Developer Hub
+# Project Setup with Node.js and ngrok
 
-Follow these steps to set up your project on the Immutable Developer Hub for seamless integration with Immutable Passport.
+Follow these steps to set up your project with Node.js and ngrok for seamless integration with Immutable Passport on the Immutable Developer Hub.
 
 ### 1. Install/Use the Latest Version of Node.js
 
