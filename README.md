@@ -82,8 +82,9 @@ http-server -p 3000
 ``` bash
 ngrok http 3000 --domain <YOUR DOMAIN>
 ```
+# Proof of Success :
 
-- You have to Log in with passport
+- You have to Log in with your Immutable passport
 
 ![Project Logo](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/0.JPG)
 
