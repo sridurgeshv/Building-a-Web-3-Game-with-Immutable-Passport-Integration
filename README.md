@@ -92,6 +92,18 @@ ngrok http 3000 --domain <YOUR DOMAIN>
 
 ![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/1.png)
 
+- The nft div showing the Level 1 Badge name, image and description
+
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/2.png)
+
+- The nft div showing the Level 2 Badge name, image and description
+
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/3.png)
+
+- Your upgraded spaceship sprite
+- Bullets showing that they are shot 2 at a time
+
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/4.png)
 
 In your browser, go to your domain. ⚠️ Ensure that your browser's pop up blocker is turned off, as it will interfere with the login and minting process. Proceed to click on the 'Connect passport' button, which will trigger a pop-up to log in with Immutable Passport. Once the login has been authenticated, the game will start. You can use arrow keys to move your spaceship around and spacebar to shoot. When you hit a score of 250, you have the chance to mint your first NFT. Then, resume the game.
 
