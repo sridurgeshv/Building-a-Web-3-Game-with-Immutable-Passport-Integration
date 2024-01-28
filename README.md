@@ -73,15 +73,22 @@ Explore Alien.js (Alien class) and Invaders.js (Invaders class). Alien.js repres
 Examine Debris.js, defining behavior and appearance of space debris. The Debris class has methods for updating position, off-screen checking, displaying debris, and detecting collisions with the player. Focus on Sketch.js, the main script orchestrating the game. Initialize game entities, manage game states, and handle user interactions. Include functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
       
 ### Testing Gameplay
-Guide users through testing gameplay—run a local server, create a secure tunnel with ngrok, and access the game through a browser. Log in with Immutable Passport, play using arrow keys and spacebar, and mint NFTs based on in-game achievements.
+Guide users through testing the gameplay by following these steps:
+
+1. Running Local Server:
+Start by running a local server using the following command:
 
 ``` bash
 http-server -p 3000
 ```
+2. Creating Secure Tunnel with Ngrok:
+Next, create a secure tunnel with Ngrok to make the game accessible through a browser. Execute the following command in the Ngrok terminal:
 
 ``` bash
 ngrok http 3000 --domain <YOUR DOMAIN>
 ```
+Once both commands are executed, users can proceed to log in with Immutable Passport, play using arrow keys and spacebar, and mint NFTs based on in-game achievements.
+
 # Proof of Success :
    In your browser, go to your domain. ⚠️ Ensure that your browser's pop up blocker is turned off, as it will interfere with the login and minting process. Proceed to click on the 'Connect passport' button, which will trigger a pop-up to log in with Immutable Passport. Once the login has been authenticated, the game will start. You can use arrow keys to move your spaceship around and spacebar to shoot.
    
