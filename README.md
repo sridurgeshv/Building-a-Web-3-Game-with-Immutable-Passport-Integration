@@ -54,14 +54,12 @@ On the ngrok website or in the Cloud Edge section, claim a free [domain](https:/
 After claiming your domain, head over to the [Immutable Developer Hub](https://hub.immutable.com/) and sign up if you haven't already.
 
 - Next in the "Projects" field, Click on "Add Project". Choose a name for your project
-
 - After that Head to "Passport" and click on "+ Add Client"
-- Now in the Passport Client Details, Next, make the following adjustments in your Immutable Developer Hub settings:
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/5.png)
 
-Application Type: Website
-Logout URLs: https://buzzard-large-basically.ngrok-free.app/logout.html
-Redirect URLs: https://buzzard-large-basically.ngrok-free.app
-Client ID: ***************ajY
+- Now in the Passport Client Details, Next, make the following adjustments in your Immutable Developer Hub settings:
+  
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/7.png)
 
 For the log out url, make sure to add "/logout.html" at the end of the redirect URL.
 
@@ -77,11 +75,14 @@ The HTTPS URL shown in the forwarding field now forwards to your local server.
 
 # Configure Game Elements
 Configure essential game elements such as canvas size, player and invader objects, and keyboard input for player movement and shooting.
+
 ### i.Passport.js
 We will first make edits to the passport.js file. In it, ensure that you replace the values of clientId, redirectUri, and logoutRedirectUri. The values for these fields are the ones from the previous step that you configured in the Developer Hub.
 
 Your code should look similar to the image below, but with your own clientId and domain.
+
 ![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/6.png)
+
 You will notice that in the logoutRedirectUri, we will redirect users to logout.html upon being logged out. Open the logout.html file now. You will notice that it is a very simple file with a message of "You have been logged out". Users will also be able to click on a link to return to the game's homepage.
 
 ### ii. Manage Login Process (Part 1 & 2)
