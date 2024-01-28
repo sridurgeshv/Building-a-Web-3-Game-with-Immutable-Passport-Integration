@@ -11,15 +11,6 @@ Immutable Passport simplifies onboarding for games, ensuring a secure, passwordl
 
 Effortlessly integrate Immutable Passport into your project with Node.js and ngrok. Follow the steps below to set up and configure your project on the Immutable Developer Hub for a seamless and secure experience.
 
-__Register Application:__
-- Head over to Immutable Hub to register your App.
-- Make sure you save your ClientID, Callback URLs, and Logout URLs.
-**Tip its better to test on localhost before deploying.
-- These are my example URLs :
--- Logout URLs: http://localhost:3000
--- Callback URLs: http://localhost:3000/login
--- Client ID (example): L*********Pu5P1xUi
-
 ## 1. Install/Use the Latest Version of Node.js
 Ensure you have Node.js installed on your machine. If not, download [Node.js](https://nodejs.org/en/download).
 
@@ -60,6 +51,20 @@ ngrok authtoken <YOUR_AUTHTOKEN>
 iv. Claim a Domain
 On the ngrok website or in the Cloud Edge section, claim a free [domain](https://dashboard.ngrok.com/cloud-edge/domains). Copy the obtained domain.
 
+After claiming your domain, head over to the [Immutable Developer Hub](https://hub.immutable.com/) and sign up if you haven't already.
+
+- Next in the "Projects" field, Click on "Add Project". Choose a name for your project
+
+- After that Head to "Passport" and click on "+ Add Client"
+- Now in the Passport Client Details, Next, make the following adjustments in your Immutable Developer Hub settings:
+
+Application Type: Website
+Logout URLs: https://buzzard-large-basically.ngrok-free.app/logout.html
+Redirect URLs: https://buzzard-large-basically.ngrok-free.app
+Client ID: ***************ajY
+
+For the log out url, make sure to add "/logout.html" at the end of the redirect URL.
+
 v. Expose Local Server
 Run the following command in your terminal to expose your local server:
 ```bash
@@ -72,8 +77,14 @@ The HTTPS URL shown in the forwarding field now forwards to your local server.
 
 # Configure Game Elements
 Configure essential game elements such as canvas size, player and invader objects, and keyboard input for player movement and shooting.
+### i.Passport.js
+We will first make edits to the passport.js file. In it, ensure that you replace the values of clientId, redirectUri, and logoutRedirectUri. The values for these fields are the ones from the previous step that you configured in the Developer Hub.
 
-### i. Manage Login Process (Part 1 & 2)
+Your code should look similar to the image below, but with your own clientId and domain.
+![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/6.png)
+You will notice that in the logoutRedirectUri, we will redirect users to logout.html upon being logged out. Open the logout.html file now. You will notice that it is a very simple file with a message of "You have been logged out". Users will also be able to click on a link to return to the game's homepage.
+
+### ii. Manage Login Process (Part 1 & 2)
 Introduce the login.js file, handling Ethereum connection, user authentication, and NFT interactions. The code includes functions for EVM connection, user accounts, information fetching, and logging out. Additionally, contract address and private key insertion, NFT details retrieval, and claiming process handling are covered.
 
 __In the login.js file, there's a private key variable that needs to be configured. For security reasons, we'll mask the private key in this documentation. Below is the line of code with the private key masked:__
@@ -82,13 +93,13 @@ const PRIVATE_KEY = '***************************9e25'; // Masked private key
 ```
 Replace the asterisks with your actual private key when setting up the project locally. However, ensure not to expose your private key in any public repositories or documentation.
 
-### ii. Player Class
+### iii. Player Class
 Introduce the Player class in Player.js, managing player state, including position, movement, bullets, lives, score, and NFT-related information. Define methods for NFT display, player respawn, spaceship upgrade, game state updates, movement/action handling, drawing, and utility.
-### iii. Bullets for Player and Invaders
+### iv. Bullets for Player and Invaders
 Create bullet classes: Bullet (general), PlayerBullet, and AlienBullet. Define bullet behavior, including movement direction, updates, and collision detection.
-### iv. Understanding Alien.js and Invaders.js
+### v. Understanding Alien.js and Invaders.js
 Explore Alien.js (Alien class) and Invaders.js (Invaders class). Alien.js represents individual aliens, with methods for drawing and player collisions. Invaders.js manages enemy logic, handling movement, shooting, and player collisions.
-### v. Understanding Debris.js & Sketch.js 
+### vi. Understanding Debris.js & Sketch.js 
 Examine Debris.js, defining behavior and appearance of space debris. The Debris class has methods for updating position, off-screen checking, displaying debris, and detecting collisions with the player. Focus on Sketch.js, the main script orchestrating the game. Initialize game entities, manage game states, and handle user interactions. Include functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
       
 ## Testing Gameplay
