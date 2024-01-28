@@ -63,6 +63,13 @@ Configure essential game elements such as canvas size, player and invader object
 
 ### i. Manage Login Process (Part 1 & 2)
 Introduce the login.js file, handling Ethereum connection, user authentication, and NFT interactions. The code includes functions for EVM connection, user accounts, information fetching, and logging out. Additionally, contract address and private key insertion, NFT details retrieval, and claiming process handling are covered.
+
+__In the login.js file, there's a private key variable that needs to be configured. For security reasons, we'll mask the private key in this documentation. Below is the line of code with the private key masked:__
+```javascript
+const PRIVATE_KEY = '***************************9e25'; // Masked private key
+```
+Replace the asterisks with your actual private key when setting up the project locally. However, ensure not to expose your private key in any public repositories or documentation.
+
 ### ii. Player Class
 Introduce the Player class in Player.js, managing player state, including position, movement, bullets, lives, score, and NFT-related information. Define methods for NFT display, player respawn, spaceship upgrade, game state updates, movement/action handling, drawing, and utility.
 ### iii. Bullets for Player and Invaders
