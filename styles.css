@@ -1,0 +1,4 @@
+body, html {
+    max-height: 100vh;
+    overflow: hidden; /* This will prevent scrolling */
+  }
