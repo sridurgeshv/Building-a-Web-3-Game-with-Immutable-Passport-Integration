@@ -121,4 +121,4 @@ Delve deeper into the functionalities and capabilities offered by [Immutable Pas
 - [Community Support](#Community-Support) :
 In case of challenges or inquiries, leverage the supportive [Immutable community](https://discord.gg/C7GNJUDF). Engage with forums, chat channels, and online communities to tap into valuable resources and insights. The Immutable Discord platform is particularly conducive for seeking assistance and participating in discussions.
 
-### Access my live application : [Application]()
+
