@@ -20,51 +20,54 @@ __Register Application:__
 -- Callback URLs: http://localhost:3000/login
 -- Client ID (example): L*********Pu5P1xUi
 
-### 1. Install/Use the Latest Version of Node.js
+## 1. Install/Use the Latest Version of Node.js
+Ensure you have Node.js installed on your machine. If not, download [Node.js](https://nodejs.org/en/download).
 
-Ensure you have Node.js installed on your machine. If not,download [Node.js](https://nodejs.org/en/download).
-
-### Expose Local Server with ngrok
- i. Install ngrok:
- For MacOS (using Homebrew):
- 
-``` bash
-brew install ngrok
-```
-
- For Windows:
-Download [ngrok](https://dashboard.ngrok.com/get-started/setup/windows) and unzip, then open the application via the terminal.
-
-To use the latest version of immutable, install the @imtbl/sdk, enabling all the passport functions:
+## 2. Initialize Project and Install Dependencies
+Navigate to your project directory in the terminal and run the following command to initialize a new JavaScript project and install the necessary libraries:
 
 ```bash
-npm install @imtbl/sdk@0.28.0
+npm init -y && npm install -D @imtbl/sdk @imtbl/contracts typescript ts-node ethers@5.7.2
 ```
+## 3. Set Up Local Server
+To run a local server for testing, install the http-server package by running the following command:
 
+```bash
+npm install --global http-server
+```
+Start the server on port 3000 with the following command:
+```bash
+http-server -p 3000
+```
+## Expose Local Server with ngrok
 
-### ii. Create an ngrok Account:
+i. Install ngrok
+For MacOS (using Homebrew):
+```bash
+brew install ngrok
+```
+For Windows:
+Download [ngrok](https://dashboard.ngrok.com/get-started/setup/windows) and unzip it. Then, open the application via the terminal.
+
+ii. Create an ngrok Account
 Visit [ngrok](https://dashboard.ngrok.com/login?state=JmUkV6gkSjCOEUITOlSyiz77u5IPWoRj1gC9yoOFFrLa7EsDyFUO2p7YpKZPmqCqj-qpy3Q04E8lbnAQQg4qPVXM7lR5_iu8iq0s9H4eSNn8QhCEho02NiEl1UKw2x1JBIWIZHh71P25SJALLdY80D-vltCJ_35KdAlerlpS0TR2gg%3D%3D) and sign up for a free account.
 
-### iii. Configure Authentication:
-After creating an account, run the following command in your terminal to configure ngrok:
-``` bash
-ngrok config add-authtoken <YOUR_AUTHTOKEN>
+iii. Configure Authentication
+After creating an account, obtain your Auth Token and run the following command in your terminal to configure ngrok:
+```bash
+ngrok authtoken <YOUR_AUTHTOKEN>
 ```
-After creating the account, you will be able to see the Auth Token on your left and replace it here and run on the ngrok terminal.
-
-### iv. Claim a Domain:
+iv. Claim a Domain
 On the ngrok website or in the Cloud Edge section, claim a free [domain](https://dashboard.ngrok.com/cloud-edge/domains). Copy the obtained domain.
 
-### v. Expose Local Server:
-
-In your terminal, run the following command to expose your local server:
-
-``` bash
+v. Expose Local Server
+Run the following command in your terminal to expose your local server:
+```bash
 ngrok http 3000 --domain <YOUR_DOMAIN>
-``` 
-Replace <YOUR_DOMAIN> with the copied domain.
+```
+Replace <YOUR_DOMAIN> with the domain you claimed.
 
-### vi. Access the Forwarded URL:
+vi. Access the Forwarded URL
 The HTTPS URL shown in the forwarding field now forwards to your local server.
 
 # Configure Game Elements
