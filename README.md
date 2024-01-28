@@ -7,21 +7,22 @@ Embarking on the journey of "Building a Game with the Immutable zkEVM" opens a g
 
 Immutable Passport simplifies onboarding for games, ensuring a secure, passwordless experience. It facilitates wallet creation without holding private keys, ensuring user control and ownership. Integrated within the Immutable platform, it grants developers access to gamers and scalable infrastructure. Gamers create their Passport once, gaining access to all Immutable-built games and marketplaces, eliminating the hassle of multiple accounts.
 
-Now I want the below information in a professional documentation format  :
-
 # Project Configuration Guide
 
 Effortlessly integrate Immutable Passport into your project with Node.js and ngrok. Follow the steps below to set up and configure your project on the Immutable Developer Hub for a seamless and secure experience.
 
+__Register Application:__
+- Head over to Immutable Hub to register your App.
+- Make sure you save your ClientID, Callback URLs, and Logout URLs.
+**Tip its better to test on localhost before deploying.
+- These are my example URLs :
+-- Logout URLs: http://localhost:3000
+-- Callback URLs: http://localhost:3000/login
+-- Client ID (example): L*********Pu5P1xUi
+
 ### 1. Install/Use the Latest Version of Node.js
 
 Ensure you have Node.js installed on your machine. If not,download [Node.js](https://nodejs.org/en/download).
-
-To use the latest version of immutable, install the @imtbl/sdk, enabling all the passport functions:
-
-```bash
-npm install @imtbl/sdk@0.28.0
-```
 
 ### Expose Local Server with ngrok
  i. Install ngrok:
@@ -34,6 +35,13 @@ brew install ngrok
  For Windows:
 Download [ngrok](https://dashboard.ngrok.com/get-started/setup/windows) and unzip, then open the application via the terminal.
 
+To use the latest version of immutable, install the @imtbl/sdk, enabling all the passport functions:
+
+```bash
+npm install @imtbl/sdk@0.28.0
+```
+
+
 ### ii. Create an ngrok Account:
 Visit [ngrok](https://dashboard.ngrok.com/login?state=JmUkV6gkSjCOEUITOlSyiz77u5IPWoRj1gC9yoOFFrLa7EsDyFUO2p7YpKZPmqCqj-qpy3Q04E8lbnAQQg4qPVXM7lR5_iu8iq0s9H4eSNn8QhCEho02NiEl1UKw2x1JBIWIZHh71P25SJALLdY80D-vltCJ_35KdAlerlpS0TR2gg%3D%3D) and sign up for a free account.
 
@@ -42,7 +50,7 @@ After creating an account, run the following command in your terminal to configu
 ``` bash
 ngrok config add-authtoken <YOUR_AUTHTOKEN>
 ```
-After creating the account, you will be able to see the Auth Token on your left and replace it here.
+After creating the account, you will be able to see the Auth Token on your left and replace it here and run on the ngrok terminal.
 
 ### iv. Claim a Domain:
 On the ngrok website or in the Cloud Edge section, claim a free [domain](https://dashboard.ngrok.com/cloud-edge/domains). Copy the obtained domain.
@@ -55,6 +63,7 @@ In your terminal, run the following command to expose your local server:
 ngrok http 3000 --domain <YOUR_DOMAIN>
 ``` 
 Replace <YOUR_DOMAIN> with the copied domain.
+
 ### vi. Access the Forwarded URL:
 The HTTPS URL shown in the forwarding field now forwards to your local server.
 
@@ -79,7 +88,7 @@ Explore Alien.js (Alien class) and Invaders.js (Invaders class). Alien.js repres
 ### v. Understanding Debris.js & Sketch.js 
 Examine Debris.js, defining behavior and appearance of space debris. The Debris class has methods for updating position, off-screen checking, displaying debris, and detecting collisions with the player. Focus on Sketch.js, the main script orchestrating the game. Initialize game entities, manage game states, and handle user interactions. Include functions for game setup, game over display, connection status visualization, resuming the game, and updating the game loop.
       
-### Testing Gameplay
+## Testing Gameplay
 Guide users through testing the gameplay by following these steps:
 
 1. Running Local Server:
