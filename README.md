@@ -11,7 +11,7 @@ Immutable Passport simplifies onboarding for games, ensuring a secure, passwordl
 
 Effortlessly integrate Immutable Passport into your project with Node.js and ngrok. Follow the steps below to set up and configure your project on the Immutable Developer Hub for a seamless and secure experience.
 
-## 1. Install/Use the Latest Version of Node.js
+## 1. Use the Latest Version of Node.js
 Ensure you have Node.js installed on your machine. If not, download [Node.js](https://nodejs.org/en/download).
 
 ## 2. Initialize Project and Install Dependencies
@@ -30,7 +30,7 @@ Start the server on port 3000 with the following command:
 ```bash
 http-server -p 3000
 ```
-## Expose Local Server with ngrok
+## 4. Expose Local Server with ngrok
 
 i. Install ngrok
 For MacOS (using Homebrew):
@@ -55,15 +55,17 @@ After claiming your domain, head over to the [Immutable Developer Hub](https://h
 
 - Next in the "Projects" field, Click on "Add Project". Choose a name for your project
 - After that Head to "Passport" and click on "+ Add Client"
+  
 ![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/5.png)
 
-- Now in the Passport Client Details, Next, make the following adjustments in your Immutable Developer Hub settings:
+- Now, within the Passport Client Details, proceed to adjust your settings in the Immutable Developer Hub accordingly:
   
 ![Alt Text](https://github.com/sridurgeshv/a-Game-with-the-Immutable-zkEVM/blob/main/images/7.png)
 
 For the log out url, make sure to add "/logout.html" at the end of the redirect URL.
 
-v. Expose Local Server
+v. Expose Local Server: 
+
 Run the following command in your terminal to expose your local server:
 ```bash
 ngrok http 3000 --domain <YOUR_DOMAIN>
@@ -76,7 +78,7 @@ The HTTPS URL shown in the forwarding field now forwards to your local server.
 # Configure Game Elements
 Configure essential game elements such as canvas size, player and invader objects, and keyboard input for player movement and shooting.
 
-### i.Passport.js
+### i. Passport.js
 We will first make edits to the passport.js file. In it, ensure that you replace the values of clientId, redirectUri, and logoutRedirectUri. The values for these fields are the ones from the previous step that you configured in the Developer Hub.
 
 Your code should look similar to the image below, but with your own clientId and domain.
