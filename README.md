@@ -119,6 +119,6 @@ Prioritize the security of your Immutable Passport credentials, particularly the
 Delve deeper into the functionalities and capabilities offered by [Immutable Passport](https://docs.immutable.com/docs/zkevm/overview/). Refer to the official documentation to discover additional ways to augment and optimize your application. Explore opportunities for further integration and feature enhancement.
 
 - [Community Support](#Community-Support) :
-In case of challenges or inquiries, leverage the supportive [Immutable community](). Engage with forums, chat channels, and online communities to tap into valuable resources and insights. The Immutable Discord platform is particularly conducive for seeking assistance and participating in discussions.
+In case of challenges or inquiries, leverage the supportive [Immutable community](https://discord.gg/C7GNJUDF). Engage with forums, chat channels, and online communities to tap into valuable resources and insights. The Immutable Discord platform is particularly conducive for seeking assistance and participating in discussions.
 
 ### Access my live application : [Application]()
